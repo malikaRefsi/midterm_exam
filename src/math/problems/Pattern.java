@@ -8,8 +8,27 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
 
+		int count=0;
+         int i=0;
+		int j=1;
+		System.out.println("the pattern is: ");
+		while (count<=10 && i<=100){
+			if ( i%j==0)
+
+			{System.out.print((100 - i) + ", ");
+				count++;
+			}
+
+
+				i++;
+				if (count == 11) {
+					count = 1;
+					j++;
+
+				}
+
+		}
 
 	}
 }
