@@ -18,14 +18,34 @@ public class Numbers {
 	 * At the end. After running all the sorting algo, come to a conclusion which one is suitable on given data set.
 	 *
 	 */
+/***************************************Conclusion********************************************/
+/* the results show that:
+Total Execution Time of 1000000 numbers in Selection Sort take: 316640 milli sec
+Total Execution Time of 1000000 numbers in Insertion Sort take: 444972 milli sec
+Total Execution Time of 1000000 numbers in Bubble Sort take: 1723419 milli sec
+Total Execution Time of 1000000 numbers in Quick Sort take: 96 milli sec
+Total Execution Time of 1000000 numbers in Merge Sort take: 314759 milli sec
+Total Execution Time of 1000000 numbers in Heap Sort take: 65 milli sec
+Total Execution Time of 1000000 numbers in Bucket Sort take: 86 milli sec
+Total Execution Time of 1000000 numbers in Shell Sort take: 16 milli sec
 
+which come to conclude that the best or the fastest and efficient is the shell sort method and the worst (the one that
+take more time) is the bubble sort method.
+and if we sort them from the fastest to the slowest we have the following:
+1-shell sort method.
+2- heap sort method.
+3- bucket sort method.
+4- quick sort method.
+5- Merge sort method.
+6- selection sort method.
+7- insertion  sort method.
+8- Bubble sort method.
+
+
+ */
+	/*********************************************************************************************************/
 	public static void main(String[] args) throws Exception {
-//		Sort algo = new Sort();
-//		int a[]={4,2,9,1,6};
-//		System.out.println(Arrays.toString(algo.shellSort(a)));
-//
-//	}
-		//print the menu ask the user to choose the desired algorithm
+
 
 		int [] num = new int[1000000];
 		storeRandomNumbers(num);
@@ -104,7 +124,8 @@ public class Numbers {
 
 
 		//Come to conclusion about which Sorting Algo is better in given data set.
-
+//since
+// Total Execution Time of 1000000 numbers in Selection Sort take: 317555 milli sec
 	}
 
 	public static void storeRandomNumbers(int [] num){

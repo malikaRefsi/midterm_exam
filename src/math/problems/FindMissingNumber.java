@@ -13,10 +13,10 @@ public class FindMissingNumber {
          int [] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
          int n= array.length;
          //call the findMissingElement(int arr, int N) method
-        findMissingElement(array,n);
+        System.out.println( "the missing number from the given array is :"+findMissingElement(array,n));
 
     }
-    public static void findMissingElement(int[] arr, int N)
+    public static int findMissingElement(int[] arr, int N)
     {
         int i;
         int temp[]=new int [N+1];
@@ -30,6 +30,6 @@ public class FindMissingNumber {
         for (i=0;i<=N;i++){
            if( temp[i]==0){result=i+1;}
         }
-        System.out.println(result);
+        return result;
     }
 }

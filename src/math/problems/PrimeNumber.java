@@ -41,16 +41,25 @@ public class PrimeNumber {
 			}
 			num++;
 		}
+		// to find the number of prime number found and use it
+		// to declare a array that will contain them with the right length
 		int k=0;
 		while (arr[k]!=0) {
 			k++;
 		}
 		int[] array=new int[k];
-
+// to print out the prime numbers
 		for (int s=0;s<k;s++){
 			array[s]=arr[s];
 			System.out.println(array[s]);
 		}
+
+
+
+
+
+
+
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		List<String> lowestValue = new ArrayList();
 

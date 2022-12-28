@@ -26,7 +26,7 @@ public class Anagram {
 
     // Check if two words are anagrams in Java
     // Uses sorting and comparison of character arrays
-    private static boolean isAnagram(String word1, String word2) {
+    public static boolean isAnagram(String word1, String word2) {
         word1 = word1.replaceAll("\\s", "").toLowerCase();
         word2 = word2.replaceAll("\\s", "").toLowerCase();
 
