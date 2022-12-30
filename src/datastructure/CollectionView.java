@@ -17,9 +17,16 @@ public static void main(String[] args) {
         map.put(4, "Boston");
         map.put(5, "San Jose");
         map.put(6, "Seattle");
-
-
-
+        // to print out the values in the map
+        System.out.println("the Collection view of values present in map are: ");
+        for (String value : map.values()){
+                System.out.println(value);
+        }
+// this to print out the keys in the map
+//        System.out.println("the Collection view of keys present in map are: ");
+//        for (Integer key : map.keySet()){
+//                System.out.println(key);
+//        }
     }
 
 }

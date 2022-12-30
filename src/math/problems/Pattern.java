@@ -8,20 +8,29 @@ public class Pattern {
 		 *
 		 *
 		 */
-		pattern();
+
+		int array[]= pattern(100);
+		for (int i=0;i<array.length;i++)
+			System.out.print(array[i]+", ");
 
 
 	}
-public static void pattern(){
+public static int[] pattern(int range){
 	int count = 0;
+	int k=0;
 	int i = 0;
 	int j = 1;
-		System.out.println("the pattern is: ");
-		while(count<=10&&i<=100)
+	// declare an array to assign to it the elements of the pattern
+	// and since we don't know its length we will consider the maximum possible length
+	int array[]=new int[range];
+		//System.out.println("the pattern is: ");
+		while(count<=10&&i<=range)
 
 	{
 		if (i % j == 0) {
-			System.out.print((100 - i) + ", ");
+			//System.out.print((100 - i) + ", ");
+			array[k]=100 - i;
+			k++;// to count the limit index
 			count++;
 		}
 
@@ -34,5 +43,12 @@ public static void pattern(){
 		}
 
 	}
+		// transfer the array to new array ar that have the exact length
+		int ar[]=new int[k];
+	for (int s=0;s<k;s++){
+		ar[s]=array[s];
+
+	}
+		return ar;
 }
 }

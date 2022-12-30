@@ -76,7 +76,41 @@ public class UnitTestingMath {
         }
 
         // apply test on the pattern method and confirm if it does the right pattern to much to expected pattern
-        int [] expectedResult5={100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 88, 86, 84, 82, 80, 78, 76, 74, 72, 70, 67, 64, 61, 58, 55, 52, 49, 46, 43, 40, 36, 32, 28, 24, 20, 16, 12, 8, 4, 0};
+        int [] expectedResult5={100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 88, 86, 84, 82, 80, 78, 76, 74, 72,
+                70, 67, 64, 61, 58, 55, 52, 49, 46, 43, 40, 36, 32, 28, 24, 20, 16, 12, 8, 4, 0};
+        //Create Pattern object
+        Pattern patternn= new Pattern();
+        // find and Write 40 Fibonacci numbers using fibonacci method
+        int [] actualResult5=patternn.pattern(100);
+        //verify if the expected array equal to the one find using pattern algorithm.
+        try {
+            Assert.assertArrayEquals(expectedResult5,actualResult5);
+
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+
+
+
+        /* apply test on the primeNumbers method
+        * and in this purpose we will use a smaller rage of 2 to 100
+         */
+        int [] expectedResult8= {2 ,3, 5, 7, 11, 13, 17, 19 ,23, 29, 31, 37, 41, 43, 47 ,53 ,59 ,61
+                ,67 ,71, 73, 79, 83, 89, 97};
+
+
+        //Create PrimeNumber object
+        PrimeNumber primeNumber= new PrimeNumber();
+        // find and Write 40 Fibonacci numbers using fibonacci method
+        int [] actualResult8=primeNumber.primeNumbers(100);
+        //verify if the expected array equal to the one find using primNumbers algorithm.
+        try {
+            Assert.assertArrayEquals(expectedResult8,actualResult8);
+
+        }catch(Exception ex){
+            ex.getMessage();
+        }
 
 
 

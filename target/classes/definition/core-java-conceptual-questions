@@ -323,7 +323,9 @@ A. While, JUnit is a framework that is open source and may be used to write and 
 framework that provides an improved way to run tests.
 
 What are the dependencies for this project?
-
+-JUnit junit:junit
+-MongoDB java org.mongodb:mongo-java-driver
+- MySQL Connector/J mysql:mysql-connector-java
 
 what is dependency injection in java?
 A. Dependency injection enables us to turn regular Java classes into managed objects and to inject them into any other

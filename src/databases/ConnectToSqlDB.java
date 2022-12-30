@@ -83,7 +83,7 @@ public class ConnectToSqlDB {
             connectToSqlDatabase();
             ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
             ps.executeUpdate();
-            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName+"` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
             ps.executeUpdate();
             for(int n=0; n<ArrayData.length; n++){
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
@@ -99,6 +99,57 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }
+    /*****************************************************************/
+    //added another method to allow me stores and retrieve two string array (create a table with two columns)
+    public void insertDataToSqlTableWithTwoColumns(String [] ArrayData, String [] ArrayData2,String tableName, String columnName1,String columnName2)
+    {
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+           ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName1+"` varchar(20) DEFAULT NULL,`"+columnName2+"` varchar(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+             ps.executeUpdate();
+            for(int n=0; n<ArrayData.length; n++){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + " ," + columnName2 + " ) VALUES(?,?)");
+                ps.setString(1,ArrayData[n]);
+                ps.setString(2,ArrayData2[n]);
+                ps.executeUpdate();
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    /*****************************************************************/
+    //added another method to allow me stores and retrieve string array
+    public void insertDataFromStringArrayToSqlTable(String [] ArrayData, String tableName, String columnName)
+    {
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName+"` varchar(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps.executeUpdate();
+            for(int n=0; n<ArrayData.length; n++){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setString(1,ArrayData[n]);
+                ps.executeUpdate();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void insertDataFromStringToSqlTable(String ArrayData, String tableName, String columnName)
     {
