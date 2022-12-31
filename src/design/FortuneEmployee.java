@@ -1,5 +1,7 @@
 package design;
 
+import java.util.Map;
+
 public class FortuneEmployee {
 
 	/**
@@ -14,9 +16,29 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
 
+		EmployeeInfo[] employeeInfo=new EmployeeInfo[500];
+	for (int i=0;i<=500;i++){
 
 	}
 
+
+	}
+	 int performance;
+	int payRate;
+	String companyName;
+	int Id;
+	String name;
+	String departement;
+	int age;
+	int workedHours;
+	String email;
+	String gender;
+	String phoneNumber;
+	int vacationDays;
+	Map<String,Integer> EmployeeSchedule;
+	int salary;
+
+	public FortuneEmployee() {
+	}
 }

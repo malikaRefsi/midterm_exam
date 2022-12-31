@@ -32,6 +32,10 @@ public class PrimeNumber {
  * call the primeNumbers method and assign its return values to an array
  */
 int range =1000000;
+
+
+
+
 int array[]=primeNumbers(range);
 		System.out.println("The prime numbers in the range of 2 to " +range+ " are: ");
 		// to print out the prime numbers
@@ -54,6 +58,9 @@ int array[]=primeNumbers(range);
 
 
 	}
+
+
+
 
 
 	public static int[] primeNumbers(int range){
