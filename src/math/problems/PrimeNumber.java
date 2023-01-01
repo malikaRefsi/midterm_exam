@@ -47,9 +47,9 @@ int array[]=primeNumbers(range);
 		// connect to my database.
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		//store the prime numbers find
-		connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_primenumber", "SortingNumbers");
+		connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_primenumber", "primenumber");
 		//retrieve the prime numbers from may database and assign it a vector "primenumbers" to print them to the console
-		List<String> primenumber  = connectToSqlDB.readDataBase("tbl_primenumber", "SortingNumbers");
+		List<String> primenumber  = connectToSqlDB.readDataBase("tbl_primenumber", "primenumber");
 
 		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
 		for(String st:primenumber ){

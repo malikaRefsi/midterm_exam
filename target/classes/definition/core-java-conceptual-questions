@@ -159,6 +159,7 @@ final keyword in Java is used to restrict the user. Can be used for variables me
 - When used for variables is to stop value change including parameter
 - when used for methods is to stop method overriding.
 - and we use it for class is to stop inheritance.
+Finalize method used to release all the resources used by the object befor it is deleted/destroyed by garbage collector
 
 What is a constructor ?
 A.Constructor can be defined as a special type of method which is used to initialize the object or as a block of code

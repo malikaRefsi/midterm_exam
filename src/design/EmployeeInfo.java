@@ -22,7 +22,7 @@ import java.util.Scanner;
 	 *
 	 */
 
-
+	    
 
 	private static int performance;
 	private static int payRate;
@@ -47,11 +47,11 @@ import java.util.Scanner;
 	}
 
 	// generate getters and setters
-	public static void setPerformance(int performance) {
-		EmployeeInfo.performance = performance;
+	public  void setPerformance(int performance) {
+		this.performance = performance;
 	}
 
-	public static int getPerformance() {
+	public int getPerformance(int performance) {
 		return performance;
 	}
 
@@ -72,7 +72,7 @@ import java.util.Scanner;
 		this.name = name;
 	}
 
-	public String getDepartement() {
+	public String getDepartement(String departement) {
 		return departement;
 	}
 
@@ -236,8 +236,8 @@ import java.util.Scanner;
 		String ar1[]=   convertedJoiningDate.split("/");
 		String ar2[]=  convertedJoiningDate.split("/");
 		int numberOfYears=0;
-		for (int i=0;i<=1;i++)
-		{numberOfYears=numberOfYears+(Math.abs(Integer.parseInt(ar1[i])-Integer.parseInt(ar1[i])))/12;}
+
+		numberOfYears=(numberOfYears+(Math.abs(Integer.parseInt(ar1[0])-Integer.parseInt(ar1[0])))/12)+Math.abs(Integer.parseInt(ar1[1])-Integer.parseInt(ar1[1]));
 		for (int j=0;j<numberOfYears;j++){
 			total=total+salary*j*0.05;
 		}
@@ -348,7 +348,7 @@ import java.util.Scanner;
 		}
 
 		public static int whichMonth(String givenMonth) {
-			Months months = Months.valueOf(givenMonth);
+			Months months= Months.valueOf(givenMonth);
 			int date = 0;
 			switch (months) {
 				case January:
